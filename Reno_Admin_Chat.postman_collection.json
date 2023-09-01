@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "507fef60-dec3-443a-9ef6-c31c36a2ace2",
+		"name": "Reno_Admin_Chat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26762530",
+		"_collection_link": "https://apiteamdevcorps.postman.co/workspace/Reno~46811f49-6efa-457f-a28e-cfc546d11d74/collection/26762530-507fef60-dec3-443a-9ef6-c31c36a2ace2?action=share&source=collection_link&creator=26762530"
+	},
+	"item": [
+		{
+			"name": "/createticket",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uid\":\"1233112123333\",\r\n    \"usname\":\"Testing_Reno13\",\r\n    \"subj\":\"Subject 3\",\r\n    \"msg\":\"Message 3\",\r\n    \"role\":\"user\"\r\n}"
+				},
+				"url": {
+					"raw": "{{chatUrl}}/createticket",
+					"host": [
+						"{{chatUrl}}"
+					],
+					"path": [
+						"createticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/getticket",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tid\":\"978837458\",\r\n    \"uid\":\"123311212\"\r\n}"
+				},
+				"url": {
+					"raw": "{{chatUrl}}/getticket",
+					"host": [
+						"{{chatUrl}}"
+					],
+					"path": [
+						"getticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/replyticket",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tid\":\"1401616499\",\r\n    \"uid\":\"123311212\",\r\n    \"msg\":\"New message 1\",\r\n    \"date\":\"29-04-2023\",\r\n    \"time\":\"01:45:38\"\r\n}"
+				},
+				"url": {
+					"raw": "{{chatUrl}}/replyticket",
+					"host": [
+						"{{chatUrl}}"
+					],
+					"path": [
+						"replyticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/closeticket",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tid\":\"978837458\"\r\n}"
+				},
+				"url": {
+					"raw": "{{chatUrl}}/closeticket",
+					"host": [
+						"{{chatUrl}}"
+					],
+					"path": [
+						"closeticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/getticketlist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{chatUrl}}/getticketlist",
+					"host": [
+						"{{chatUrl}}"
+					],
+					"path": [
+						"getticketlist"
+					]
+				}
+			},
+			"response": [
+				
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "chatUrl",
+			"value": "http://139.59.236.50:5002"
+		}
+	]
+}
